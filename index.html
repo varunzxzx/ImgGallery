@@ -10,6 +10,7 @@
     <script type="text/javascript" src="bootstrap.js"></script>
     <script type="text/javascript" src="jQuery.js"></script>
     <script src="https://use.fontawesome.com/349cca807d.js"></script>
+    <script type="text/javascript" src="jquery.viewportchecker.min.js"></script>
     <link type="text/css" rel="stylesheet" href="style.css">
     <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
     <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
@@ -21,8 +22,16 @@
         @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
         @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
         /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        
     </style>
-
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.thumbnail').viewportChecker({
+                classToAdd: 'animated fadeIn',
+                offset: 150
+               });
+        });
+    </script>
     <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
     <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
     <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
@@ -110,5 +119,6 @@
     </div>
 <script type="text/javascript" src="bootstrap.js"></script>
 <script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="jquery.viewportchecker.min.js"></script>
 </body>
 </html>
