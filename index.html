@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="bootstrap.js"></script>
     <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://use.fontawesome.com/349cca807d.js"></script>
     <script type="text/javascript" src="jquery.viewportchecker.min.js"></script>
     <link type="text/css" rel="stylesheet" href="style.css">
@@ -30,6 +31,12 @@
                 classToAdd: 'animated fadeIn',
                 offset: 150
                });
+        });
+        $(function() {$('body').on('click', 'a', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top},1500,'easeInOutExpo');
+          event.preventDefault();
+          });
         });
     </script>
     <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
@@ -58,8 +65,8 @@
             <li><a href="#">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#last">Sign Up</a></li>
+            <li><a href="#first">Login</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -70,55 +77,61 @@
             <h4>A bunch of beautiful images that I didn't take(except for the first one!)</h4>
         </div>
         <div class="row">
+            <div id="first">
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://www.sitebuilderreport.com/assets/facebook-stock-up-446fff24fb11820517c520c4a5a4c032.jpg" style="width:350px;height:250px;">
+                    <img src="https://www.sitebuilderreport.com/assets/facebook-stock-up-446fff24fb11820517c520c4a5a4c032.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://www.bigstockphoto.com/images/homepage/2016_bigstock_video.jpg" style="width:350px;height:250px;">
+                    <img src="https://www.bigstockphoto.com/images/homepage/2016_bigstock_video.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2009/03/car.jpg" style="width:350px;height:250px;">
+                    <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2009/03/car.jpg" style="width:100%;height:250px;">
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg" style="width:350px;height:250px;">
+                    <img src="https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg" style="width:350px;height:250px;">
+                    <img src="http://mosaicon.hu/wallpapers/macskak/fullhd-hatterkep-cica-62610938.jpg" style="width:100%;height:250px;">
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="last">
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="https://static.pexels.com/photos/34020/pexels-photo.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="http://mosaicon.hu/wallpapers/macskak/fullhd-hatterkep-cica-62610938.jpg" style="width:350px;height:250px;">
+                    <img src="https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg" style="width:100%;height:250px;">
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
-                    <img src="https://static.pexels.com/photos/34020/pexels-photo.jpg" style="width:350px;height:250px;">
+                    <img src="https://static.pexels.com/photos/5358/sea-beach-holiday-vacation.jpg" style="width:100%;height:250px;">
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg" style="width:350px;height:250px;">
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://static.pexels.com/photos/5358/sea-beach-holiday-vacation.jpg" style="width:350px;height:250px;">
-                </div>
-            </div>
         </div>
     </div>
 <script type="text/javascript" src="bootstrap.js"></script>
 <script type="text/javascript" src="jQuery.js"></script>
 <script type="text/javascript" src="jquery.viewportchecker.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 </body>
 </html>
